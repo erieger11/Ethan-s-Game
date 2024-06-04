@@ -14,14 +14,13 @@ public class GamePanel extends JPanel implements Runnable {
     final int screenWidth = tileSize * maxScreenColumn;
     final int screenHeight = tileSize * maxScreenRow;
 
-    // FPS
     int FPS = 60;
     Thread gameThread;
     Player player;
 
     public GamePanel() {
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
-        this.setBackground(Color.white);
+        this.setBackground(Color.green);
         this.setDoubleBuffered(true);
         this.setFocusable(true);
 
@@ -60,6 +59,7 @@ public class GamePanel extends JPanel implements Runnable {
         player.update();
     }
 
+    @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
