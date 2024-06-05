@@ -12,8 +12,8 @@ import java.io.InputStreamReader;
 public class TileManager {
 
     GamePanel gp;
-    Tile[] tile;
-    int[][] mapTileNumber;
+    public Tile[] tile;
+    public int[][] mapTileNumber;
 
     public TileManager(GamePanel gp){
         this.gp = gp;
@@ -48,6 +48,7 @@ public class TileManager {
             // Water
             tile[9] = new Tile();
             tile[9].image = ImageIO.read(getClass().getResourceAsStream("/tiles/water.png"));
+            tile[9].collision = true;
             tile[10] = new Tile();
             tile[10].image = ImageIO.read(getClass().getResourceAsStream("/tiles/waterLandBorderTop.png"));
             tile[11] = new Tile();
@@ -127,21 +128,28 @@ public class TileManager {
             tile[44].image = ImageIO.read(getClass().getResourceAsStream("/tiles/tallGrass.png"));
             tile[45] = new Tile();
             tile[45].image = ImageIO.read(getClass().getResourceAsStream("/tiles/tallTreeBottom.png"));
+            tile[45].collision = true;
             tile[46] = new Tile();
             tile[46].image = ImageIO.read(getClass().getResourceAsStream("/tiles/tallTreeTop.png"));
+            tile[46].collision = true;
 
 
             // Walls
             tile[47] = new Tile();
             tile[47].image = ImageIO.read(getClass().getResourceAsStream("/tiles/woodWall.png"));
+            tile[47].collision = true;
             tile[48] = new Tile();
             tile[48].image = ImageIO.read(getClass().getResourceAsStream("/tiles/woodWallLeft.png"));
+            tile[48].collision = true;
             tile[49] = new Tile();
             tile[49].image = ImageIO.read(getClass().getResourceAsStream("/tiles/woodWallRight.png"));
+            tile[49].collision = true;
             tile[50] = new Tile();
             tile[50].image = ImageIO.read(getClass().getResourceAsStream("/tiles/windowHouse.png"));
+            tile[50].collision = true;
             tile[51] = new Tile();
             tile[51].image = ImageIO.read(getClass().getResourceAsStream("/tiles/roof1.png"));
+            tile[51].collision = true;
 
 
         } catch(IOException e){
